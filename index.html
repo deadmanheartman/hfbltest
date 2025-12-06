@@ -1,34 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Green Network - Protect Earth</title>
+    <title>醇享咖啡 | 探索世界风味</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
+        :root {
+            --primary: #4e2e1a;
+            --secondary: #8a5a3a;
+            --accent: #ff9f1c;
+            --light: #fff8f2;
+            --dark: #2e1808;
+            --text: #5e3d24;
+            --white: #ffffff;
+        }
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
-
-        :root {
-            --primary: #2e7d32;
-            --secondary: #4caf50;
-            --accent: #8bc34a;
-            --light: #e8f5e9;
-            --dark: #1b5e20;
-            --text: #333333;
-            --white: #ffffff;
-        }
-
         body {
             background-color: var(--light);
             color: var(--text);
             line-height: 1.6;
         }
-
         header {
             background: linear-gradient(to right, var(--primary), var(--secondary));
             color: var(--white);
@@ -38,19 +35,16 @@
             z-index: 100;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
-
         .container {
             width: 90%;
             max-width: 1200px;
             margin: 0 auto;
         }
-
         .nav-container {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
-
         .logo {
             display: flex;
             align-items: center;
@@ -58,20 +52,16 @@
             font-size: 1.8rem;
             font-weight: 700;
         }
-
         .logo i {
             font-size: 2rem;
         }
-
         nav ul {
             display: flex;
             list-style: none;
         }
-
         nav ul li {
             margin-left: 2rem;
         }
-
         nav ul li a {
             color: var(--white);
             text-decoration: none;
@@ -80,11 +70,9 @@
             padding: 0.5rem 0;
             position: relative;
         }
-
         nav ul li a:hover {
             color: var(--accent);
         }
-
         nav ul li a::after {
             content: '';
             position: absolute;
@@ -95,13 +83,11 @@
             background-color: var(--accent);
             transition: width 0.3s ease;
         }
-
         nav ul li a:hover::after {
             width: 100%;
         }
-
         .hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2073&q=80');
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url('https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
             background-size: cover;
             background-position: center;
             height: 80vh;
@@ -110,23 +96,19 @@
             text-align: center;
             color: var(--white);
         }
-
         .hero-content {
             max-width: 800px;
             margin: 0 auto;
         }
-
         .hero h1 {
             font-size: 3.5rem;
             margin-bottom: 1rem;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
-
         .hero p {
             font-size: 1.3rem;
             margin-bottom: 2rem;
         }
-
         .btn {
             display: inline-block;
             background-color: var(--accent);
@@ -140,22 +122,18 @@
             cursor: pointer;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
-
         .btn:hover {
             background-color: var(--primary);
             transform: translateY(-3px);
             box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
         }
-
         section {
             padding: 5rem 0;
         }
-
         .section-title {
             text-align: center;
             margin-bottom: 3rem;
         }
-
         .section-title h2 {
             font-size: 2.5rem;
             color: var(--primary);
@@ -163,7 +141,6 @@
             position: relative;
             display: inline-block;
         }
-
         .section-title h2::after {
             content: '';
             position: absolute;
@@ -175,54 +152,45 @@
             background-color: var(--accent);
             border-radius: 2px;
         }
-
         .section-title p {
             color: var(--text);
             max-width: 700px;
             margin: 0 auto;
         }
-
         .about-content {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 3rem;
             align-items: center;
         }
-
         .about-img {
             border-radius: 10px;
             overflow: hidden;
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
         }
-
         .about-img img {
             width: 100%;
             height: auto;
             display: block;
             transition: transform 0.5s ease;
         }
-
         .about-img:hover img {
             transform: scale(1.05);
         }
-
         .about-text h3 {
             font-size: 1.8rem;
             margin-bottom: 1.5rem;
             color: var(--dark);
         }
-
         .about-text p {
             margin-bottom: 1.5rem;
         }
-
         .stats {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             gap: 2rem;
             margin-top: 3rem;
         }
-
         .stat-item {
             text-align: center;
             padding: 2rem 1rem;
@@ -231,91 +199,74 @@
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
             transition: transform 0.3s ease;
         }
-
         .stat-item:hover {
             transform: translateY(-10px);
         }
-
         .stat-item i {
             font-size: 2.5rem;
             color: var(--primary);
             margin-bottom: 1rem;
         }
-
         .stat-item h3 {
             font-size: 2.5rem;
             color: var(--dark);
             margin-bottom: 0.5rem;
         }
-
         .stat-item p {
             color: var(--text);
         }
-
-        .initiatives {
+        .beans {
             background-color: var(--white);
         }
-
-        .initiatives-grid {
+        .beans-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 2rem;
         }
-
-        .initiative-card {
+        .bean-card {
             background-color: var(--light);
             border-radius: 10px;
             overflow: hidden;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
             transition: transform 0.3s ease;
         }
-
-        .initiative-card:hover {
+        .bean-card:hover {
             transform: translateY(-10px);
         }
-
-        .initiative-img {
+        .bean-img {
             height: 200px;
             overflow: hidden;
         }
-
-        .initiative-img img {
+        .bean-img img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             transition: transform 0.5s ease;
         }
-
-        .initiative-card:hover .initiative-img img {
+        .bean-card:hover .bean-img img {
             transform: scale(1.1);
         }
-
-        .initiative-content {
+        .bean-content {
             padding: 1.5rem;
         }
-
-        .initiative-content h3 {
+        .bean-content h3 {
             font-size: 1.5rem;
             margin-bottom: 1rem;
             color: var(--dark);
         }
-
-        .initiative-content p {
+        .bean-content p {
             margin-bottom: 1.5rem;
         }
-
         .cta {
             background: linear-gradient(to right, var(--primary), var(--secondary));
             color: var(--white);
             text-align: center;
             padding: 5rem 0;
         }
-
         .cta h2 {
             font-size: 2.5rem;
             margin-bottom: 1.5rem;
         }
-
         .cta p {
             font-size: 1.2rem;
             margin-bottom: 2rem;
@@ -323,37 +274,31 @@
             margin-left: auto;
             margin-right: auto;
         }
-
         .cta .btn {
             background-color: var(--white);
             color: var(--primary);
         }
-
         .cta .btn:hover {
             background-color: var(--accent);
             color: var(--white);
         }
-
         footer {
             background-color: var(--dark);
             color: var(--white);
             padding: 3rem 0 1rem;
         }
-
         .footer-content {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             gap: 2rem;
             margin-bottom: 2rem;
         }
-
         .footer-column h3 {
             font-size: 1.3rem;
             margin-bottom: 1.5rem;
             position: relative;
             padding-bottom: 10px;
         }
-
         .footer-column h3::after {
             content: '';
             position: absolute;
@@ -363,35 +308,28 @@
             height: 2px;
             background-color: var(--accent);
         }
-
         .footer-column p {
             margin-bottom: 1rem;
         }
-
         .footer-links {
             list-style: none;
         }
-
         .footer-links li {
             margin-bottom: 0.8rem;
         }
-
         .footer-links li a {
             color: var(--light);
             text-decoration: none;
             transition: all 0.3s ease;
         }
-
         .footer-links li a:hover {
             color: var(--accent);
             padding-left: 5px;
         }
-
         .social-links {
             display: flex;
             gap: 1rem;
         }
-
         .social-links a {
             display: inline-flex;
             align-items: center;
@@ -404,51 +342,41 @@
             text-decoration: none;
             transition: all 0.3s ease;
         }
-
         .social-links a:hover {
             background-color: var(--accent);
             transform: translateY(-5px);
         }
-
         .copyright {
             text-align: center;
             padding-top: 2rem;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
         }
-
         .mobile-menu {
             display: none;
             font-size: 1.5rem;
             cursor: pointer;
         }
-
         @media (max-width: 992px) {
             .about-content {
                 grid-template-columns: 1fr;
             }
-            
-            .initiatives-grid {
+            .beans-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
-            
             .footer-content {
                 grid-template-columns: repeat(2, 1fr);
             }
-            
             .stats {
                 grid-template-columns: repeat(2, 1fr);
             }
         }
-
         @media (max-width: 768px) {
             .hero h1 {
                 font-size: 2.5rem;
             }
-            
             .hero p {
                 font-size: 1.1rem;
             }
-            
             nav ul {
                 display: none;
                 position: absolute;
@@ -461,34 +389,26 @@
                 text-align: center;
                 box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
             }
-            
             nav ul.active {
                 display: flex;
             }
-            
             nav ul li {
                 margin: 0;
                 padding: 0.8rem 0;
             }
-            
             .mobile-menu {
                 display: block;
             }
-            
-            .initiatives-grid {
+            .beans-grid {
                 grid-template-columns: 1fr;
             }
-            
             .footer-content {
                 grid-template-columns: 1fr;
             }
-            
             .stats {
                 grid-template-columns: 1fr;
             }
         }
-
-        /* Animation for stats counter */
         .counter {
             transition: all 0.5s ease;
         }
@@ -499,19 +419,19 @@
     <header>
         <div class="container nav-container">
             <div class="logo">
-                <i class="fas fa-seedling"></i>
-                <span>Green Network</span>
+                <i class="fas fa-coffee"></i>
+                <span>醇享咖啡</span>
             </div>
             <nav>
                 <div class="mobile-menu">
                     <i class="fas fa-bars"></i>
                 </div>
                 <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#initiatives">Initiatives</a></li>
-                    <li><a href="#get-involved">Get Involved</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#home">首页</a></li>
+                    <li><a href="#about">关于我们</a></li>
+                    <li><a href="#beans">咖啡豆</a></li>
+                    <li><a href="#get-involved">加入我们</a></li>
+                    <li><a href="#contact">联系方式</a></li>
                 </ul>
             </nav>
         </div>
@@ -520,9 +440,9 @@
     <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="container hero-content">
-            <h1>Protect Our Planet, Preserve Our Future</h1>
-            <p>Join the global movement to create a sustainable world through conservation, education, and community action.</p>
-            <a href="#get-involved" class="btn">Join Our Network</a>
+            <h1>探索世界咖啡风味</h1>
+            <p>从种植到烘焙，我们为您带来全球优质产区的精品咖啡豆。</p>
+            <a href="#get-involved" class="btn">立即品尝</a>
         </div>
     </section>
 
@@ -530,82 +450,82 @@
     <section id="about">
         <div class="container">
             <div class="section-title">
-                <h2>About Green Network</h2>
-                <p>We are a global community dedicated to environmental protection and sustainable development.</p>
+                <h2>关于醇享咖啡</h2>
+                <p>我们致力于寻找全球最好的咖啡豆，为您带来纯正的咖啡体验。</p>
             </div>
             <div class="about-content">
                 <div class="about-img">
-                    <img src="https://images.unsplash.com/photo-1507591064344-4c6ce005b128?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Team planting trees">
+                    <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80" alt="咖啡师">
                 </div>
                 <div class="about-text">
-                    <h3>Our Mission</h3>
-                    <p>Green Network is committed to creating a sustainable future by protecting natural ecosystems, promoting renewable energy, and empowering communities to take environmental action.</p>
-                    <p>Founded in 2010, we've grown from a small grassroots organization to an international network with over 50,000 members across 120 countries.</p>
-                    <p>Our approach combines scientific research, community engagement, and policy advocacy to address the most pressing environmental challenges of our time.</p>
-                    <a href="#" class="btn">Learn More</a>
+                    <h3>我们的故事</h3>
+                    <p>醇享咖啡成立于2012年，源于对咖啡文化的热爱。我们直接与全球咖啡产区的农户合作，确保每一颗咖啡豆的品质。</p>
+                    <p>从埃塞俄比亚的高原到哥伦比亚的山区，我们的采购团队走遍世界，只为找到最优质的咖啡豆。</p>
+                    <p>我们不仅提供咖啡豆，更传播咖啡文化，让更多人了解并爱上咖啡。</p>
+                    <a href="#" class="btn">了解更多</a>
                 </div>
             </div>
             <div class="stats">
                 <div class="stat-item">
-                    <i class="fas fa-tree"></i>
-                    <h3 class="counter" data-target="2500000">0</h3>
-                    <p>Trees Planted</p>
+                    <i class="fas fa-seedling"></i>
+                    <h3 class="counter" data-target="15">0</h3>
+                    <p>合作产区</p>
                 </div>
                 <div class="stat-item">
-                    <i class="fas fa-users"></i>
-                    <h3 class="counter" data-target="50000">0</h3>
-                    <p>Active Members</p>
+                    <i class="fas fa-user-friends"></i>
+                    <h3 class="counter" data-target="3000">0</h3>
+                    <p>忠实客户</p>
                 </div>
                 <div class="stat-item">
-                    <i class="fas fa-globe-americas"></i>
-                    <h3 class="counter" data-target="120">0</h3>
-                    <p>Countries Reached</p>
+                    <i class="fas fa-coffee"></i>
+                    <h3 class="counter" data-target="50">0</h3>
+                    <p>咖啡品种</p>
                 </div>
                 <div class="stat-item">
-                    <i class="fas fa-recycle"></i>
-                    <h3 class="counter" data-target="1500">0</h3>
-                    <p>Cleanup Projects</p>
+                    <i class="fas fa-award"></i>
+                    <h3 class="counter" data-target="8">0</h3>
+                    <p>获奖年份</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Initiatives Section -->
-    <section class="initiatives" id="initiatives">
+    <!-- Beans Section -->
+    <section class="beans" id="beans">
         <div class="container">
             <div class="section-title">
-                <h2>Our Initiatives</h2>
-                <p>Discover the key programs and projects we're implementing to protect our planet.</p>
+                <h2>精选咖啡豆</h2>
+                <p>来自世界各地优质产区的精品咖啡豆。</p>
             </div>
-            <div class="initiatives-grid">
-                <div class="initiative-card">
-                    <div class="initiative-img">
-                        <img src="https://dialogue.earth/content/uploads/2021/04/lessons-from-the-rush-to-reforest-china-dialogue-2400x1599.jpg" alt="Reforestation">
+            <div class="beans-grid">
+                <div class="bean-card">
+                    <div class="bean-img">
+                        <img src="https://images.unsplash.com/photo-1559056199-641a0ac8b55e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="埃塞俄比亚">
                     </div>
-                    <div class="initiative-content">
-                        <h3>Global Reforestation</h3>
-                        <p>Planting millions of trees worldwide to restore ecosystems, combat climate change, and protect biodiversity.</p>
-                        <a href="#" class="btn">Learn More</a>
-                    </div>
-                </div>
-                <div class="initiative-card">
-                    <div class="initiative-img">
-                        <img src="https://images.unsplash.com/photo-1621451537084-482c73073a0f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80" alt="Ocean Conservation">
-                    </div>
-                    <div class="initiative-content">
-                        <h3>Ocean Conservation</h3>
-                        <p>Protecting marine ecosystems, reducing plastic pollution, and promoting sustainable fishing practices.</p>
-                        <a href="#" class="btn">Learn More</a>
+                    <div class="bean-content">
+                        <h3>埃塞俄比亚 · 耶加雪菲</h3>
+                        <p>花香果酸明亮，口感清爽，带有柑橘和茶感。</p>
+                        <a href="#" class="btn">了解详情</a>
                     </div>
                 </div>
-                <div class="initiative-card">
-                    <div class="initiative-img">
-                        <img src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2072&q=80" alt="Renewable Energy">
+                <div class="bean-card">
+                    <div class="bean-img">
+                        <img src="https://images.unsplash.com/photo-1521302080334-4bebac2763a6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="哥伦比亚">
                     </div>
-                    <div class="initiative-content">
-                        <h3>Renewable Energy</h3>
-                        <p>Promoting solar, wind, and other clean energy sources to reduce dependence on fossil fuels.</p>
-                        <a href="#" class="btn">Learn More</a>
+                    <div class="bean-content">
+                        <h3>哥伦比亚 · 慧兰</h3>
+                        <p>焦糖甜感，坚果香气，酸度平衡，口感顺滑。</p>
+                        <a href="#" class="btn">了解详情</a>
+                    </div>
+                </div>
+                <div class="bean-card">
+                    <div class="bean-img">
+                        <img src="https://images.unsplash.com/photo-1507133750040-4a8f57021571?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80" alt="巴西">
+                    </div>
+                    <div class="bean-content">
+                        <h3>巴西 · 喜拉多</h3>
+                        <p>巧克力风味，坚果香气，低酸度，醇厚口感。</p>
+                        <a href="#" class="btn">了解详情</a>
                     </div>
                 </div>
             </div>
@@ -615,9 +535,9 @@
     <!-- CTA Section -->
     <section class="cta" id="get-involved">
         <div class="container">
-            <h2>Join Our Global Movement</h2>
-            <p>Together, we can create a sustainable future for generations to come. Every action counts, no matter how small.</p>
-            <a href="#" class="btn">Become a Member</a>
+            <h2>加入我们的咖啡之旅</h2>
+            <p>订阅我们的咖啡，每月为您精心挑选全球优质产区的精品咖啡豆。</p>
+            <a href="#" class="btn">立即订阅</a>
         </div>
     </section>
 
@@ -626,8 +546,8 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-column">
-                    <h3>Green Network</h3>
-                    <p>We are dedicated to protecting our planet through collaborative action, education, and sustainable solutions.</p>
+                    <h3>醇享咖啡</h3>
+                    <p>我们致力于为您带来世界各地的精品咖啡豆，让每一杯咖啡都成为享受。</p>
                     <div class="social-links">
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
                         <a href="#"><i class="fab fa-twitter"></i></a>
@@ -636,34 +556,34 @@
                     </div>
                 </div>
                 <div class="footer-column">
-                    <h3>Quick Links</h3>
+                    <h3>快速链接</h3>
                     <ul class="footer-links">
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="#initiatives">Initiatives</a></li>
-                        <li><a href="#get-involved">Get Involved</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#home">首页</a></li>
+                        <li><a href="#about">关于我们</a></li>
+                        <li><a href="#beans">咖啡豆</a></li>
+                        <li><a href="#get-involved">加入我们</a></li>
+                        <li><a href="#contact">联系方式</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
-                    <h3>Our Programs</h3>
+                    <h3>咖啡知识</h3>
                     <ul class="footer-links">
-                        <li><a href="#">Reforestation</a></li>
-                        <li><a href="#">Ocean Cleanup</a></li>
-                        <li><a href="#">Wildlife Protection</a></li>
-                        <li><a href="#">Climate Education</a></li>
-                        <li><a href="#">Sustainable Agriculture</a></li>
+                        <li><a href="#">冲泡指南</a></li>
+                        <li><a href="#">咖啡产区</a></li>
+                        <li><a href="#">烘焙知识</a></li>
+                        <li><a href="#">品鉴技巧</a></li>
+                        <li><a href="#">咖啡文化</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
-                    <h3>Contact Us</h3>
-                    <p><i class="fas fa-map-marker-alt"></i> Copper Creek Drive, New York</p>
-                    <p><i class="fas fa-phone"></i> +1 (312) 171-0771</p>
-                    <p><i class="fas fa-envelope"></i> support@greennetwork.org</p>
+                    <h3>联系我们</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 咖啡街88号，上海</p>
+                    <p><i class="fas fa-phone"></i> +86 123 4567 8900</p>
+                    <p><i class="fas fa-envelope"></i> hello@purecoff.cn</p>
                 </div>
             </div>
             <div class="copyright">
-                <p>&copy; 2025 Green Network. All rights reserved.</p>
+                <p>&copy; 2025 醇享咖啡. 保留所有权利.</p>
             </div>
         </div>
     </footer>
@@ -677,14 +597,11 @@
         // Counter Animation
         function animateCounters() {
             const counters = document.querySelectorAll('.counter');
-            const speed = 200; // The lower the slower
-            
+            const speed = 200;
             counters.forEach(counter => {
                 const target = +counter.getAttribute('data-target');
                 const count = +counter.innerText;
-                
                 const inc = target / speed;
-                
                 if(count < target) {
                     counter.innerText = Math.ceil(count + inc);
                     setTimeout(animateCounters, 1);
@@ -693,30 +610,24 @@
                 }
             });
         }
-
-        // Initialize counters when page loads
         window.addEventListener('load', animateCounters);
 
-        // Smooth scrolling for navigation links
+        // Smooth scrolling
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
-                
                 const targetId = this.getAttribute('href');
                 if(targetId === '#') return;
-                
                 const targetElement = document.querySelector(targetId);
                 if(targetElement) {
                     window.scrollTo({
                         top: targetElement.offsetTop - 80,
                         behavior: 'smooth'
                     });
-                    
                     document.querySelector('nav ul').classList.remove('active');
                 }
             });
         });
     </script>
 </body>
-
 </html>
