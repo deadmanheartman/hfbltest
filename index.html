@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>醇享咖啡 | 探索世界风味</title>
+    <title>星语天文 | 探索宇宙奥秘</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
-            --primary: #4e2e1a;
-            --secondary: #8a5a3a;
-            --accent: #ff9f1c;
-            --light: #fff8f2;
-            --dark: #2e1808;
-            --text: #5e3d24;
+            --primary: #0b1a30;
+            --secondary: #1e3a5f;
+            --accent: #00d4ff;
+            --light: #f0f8ff;
+            --dark: #020a15;
+            --text: #c3d5f0;
             --white: #ffffff;
         }
         * {
@@ -22,7 +22,7 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
         body {
-            background-color: var(--light);
+            background-color: var(--dark);
             color: var(--text);
             line-height: 1.6;
         }
@@ -33,7 +33,7 @@
             position: sticky;
             top: 0;
             z-index: 100;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
         }
         .container {
             width: 90%;
@@ -87,7 +87,7 @@
             width: 100%;
         }
         .hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url('https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background: linear-gradient(rgba(2, 10, 21, 0.8), rgba(2, 10, 21, 0.5)), url('https://images.unsplash.com/photo-1446776653964-20c1d3a81b06?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80');
             background-size: cover;
             background-position: center;
             height: 80vh;
@@ -136,7 +136,7 @@
         }
         .section-title h2 {
             font-size: 2.5rem;
-            color: var(--primary);
+            color: var(--accent);
             margin-bottom: 1rem;
             position: relative;
             display: inline-block;
@@ -180,7 +180,7 @@
         .about-text h3 {
             font-size: 1.8rem;
             margin-bottom: 1.5rem;
-            color: var(--dark);
+            color: var(--accent);
         }
         .about-text p {
             margin-bottom: 1.5rem;
@@ -194,7 +194,7 @@
         .stat-item {
             text-align: center;
             padding: 2rem 1rem;
-            background-color: var(--white);
+            background-color: rgba(255, 255, 255, 0.05);
             border-radius: 10px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
             transition: transform 0.3s ease;
@@ -204,57 +204,57 @@
         }
         .stat-item i {
             font-size: 2.5rem;
-            color: var(--primary);
+            color: var(--accent);
             margin-bottom: 1rem;
         }
         .stat-item h3 {
             font-size: 2.5rem;
-            color: var(--dark);
+            color: var(--white);
             margin-bottom: 0.5rem;
         }
         .stat-item p {
             color: var(--text);
         }
-        .beans {
-            background-color: var(--white);
+        .events {
+            background-color: rgba(255, 255, 255, 0.03);
         }
-        .beans-grid {
+        .events-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 2rem;
         }
-        .bean-card {
-            background-color: var(--light);
+        .event-card {
+            background-color: rgba(255, 255, 255, 0.05);
             border-radius: 10px;
             overflow: hidden;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
             transition: transform 0.3s ease;
         }
-        .bean-card:hover {
+        .event-card:hover {
             transform: translateY(-10px);
         }
-        .bean-img {
+        .event-img {
             height: 200px;
             overflow: hidden;
         }
-        .bean-img img {
+        .event-img img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             transition: transform 0.5s ease;
         }
-        .bean-card:hover .bean-img img {
+        .event-card:hover .event-img img {
             transform: scale(1.1);
         }
-        .bean-content {
+        .event-content {
             padding: 1.5rem;
         }
-        .bean-content h3 {
+        .event-content h3 {
             font-size: 1.5rem;
             margin-bottom: 1rem;
-            color: var(--dark);
+            color: var(--accent);
         }
-        .bean-content p {
+        .event-content p {
             margin-bottom: 1.5rem;
         }
         .cta {
@@ -318,7 +318,7 @@
             margin-bottom: 0.8rem;
         }
         .footer-links li a {
-            color: var(--light);
+            color: var(--text);
             text-decoration: none;
             transition: all 0.3s ease;
         }
@@ -360,7 +360,7 @@
             .about-content {
                 grid-template-columns: 1fr;
             }
-            .beans-grid {
+            .events-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
             .footer-content {
@@ -399,7 +399,7 @@
             .mobile-menu {
                 display: block;
             }
-            .beans-grid {
+            .events-grid {
                 grid-template-columns: 1fr;
             }
             .footer-content {
@@ -419,8 +419,8 @@
     <header>
         <div class="container nav-container">
             <div class="logo">
-                <i class="fas fa-coffee"></i>
-                <span>醇享咖啡</span>
+                <i class="fas fa-meteor"></i>
+                <span>星语天文</span>
             </div>
             <nav>
                 <div class="mobile-menu">
@@ -429,7 +429,7 @@
                 <ul>
                     <li><a href="#home">首页</a></li>
                     <li><a href="#about">关于我们</a></li>
-                    <li><a href="#beans">咖啡豆</a></li>
+                    <li><a href="#events">天文活动</a></li>
                     <li><a href="#get-involved">加入我们</a></li>
                     <li><a href="#contact">联系方式</a></li>
                 </ul>
@@ -440,9 +440,9 @@
     <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="container hero-content">
-            <h1>探索世界咖啡风味</h1>
-            <p>从种植到烘焙，我们为您带来全球优质产区的精品咖啡豆。</p>
-            <a href="#get-involved" class="btn">立即品尝</a>
+            <h1>探索无限宇宙</h1>
+            <p>从观星入门到深空摄影，与我们一起解锁星辰大海的奥秘。</p>
+            <a href="#get-involved" class="btn">开始探索</a>
         </div>
     </section>
 
@@ -450,82 +450,82 @@
     <section id="about">
         <div class="container">
             <div class="section-title">
-                <h2>关于醇享咖啡</h2>
-                <p>我们致力于寻找全球最好的咖啡豆，为您带来纯正的咖啡体验。</p>
+                <h2>关于星语天文</h2>
+                <p>我们致力于传播天文知识，让更多人仰望星空、了解宇宙。</p>
             </div>
             <div class="about-content">
                 <div class="about-img">
-                    <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80" alt="咖啡师">
+                    <img src="https://images.unsplash.com/photo-1446776877081-d282a0f896e2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80" alt="望远镜">
                 </div>
                 <div class="about-text">
-                    <h3>我们的故事</h3>
-                    <p>醇享咖啡成立于2012年，源于对咖啡文化的热爱。我们直接与全球咖啡产区的农户合作，确保每一颗咖啡豆的品质。</p>
-                    <p>从埃塞俄比亚的高原到哥伦比亚的山区，我们的采购团队走遍世界，只为找到最优质的咖啡豆。</p>
-                    <p>我们不仅提供咖啡豆，更传播咖啡文化，让更多人了解并爱上咖啡。</p>
+                    <h3>我们的使命</h3>
+                    <p>星语天文成立于2015年，是一家专注于天文科普与观星活动的非营利组织。我们相信，每个人都有权利感受宇宙的壮丽。</p>
+                    <p>从城市观星到沙漠星空马拉松，我们组织各类活动，让参与者亲手操作望远镜，识别星座，拍摄银河。</p>
+                    <p>我们还定期举办天文讲座、线上直播，邀请国内外专家分享最新天文发现与航天动态。</p>
                     <a href="#" class="btn">了解更多</a>
                 </div>
             </div>
             <div class="stats">
                 <div class="stat-item">
-                    <i class="fas fa-seedling"></i>
-                    <h3 class="counter" data-target="15">0</h3>
-                    <p>合作产区</p>
+                    <i class="fas fa-users"></i>
+                    <h3 class="counter" data-target="8000">0</h3>
+                    <p>活跃会员</p>
                 </div>
                 <div class="stat-item">
-                    <i class="fas fa-user-friends"></i>
-                    <h3 class="counter" data-target="3000">0</h3>
-                    <p>忠实客户</p>
+                    <i class="fas fa-calendar-alt"></i>
+                    <h3 class="counter" data-target="120">0</h3>
+                    <p>年度活动</p>
                 </div>
                 <div class="stat-item">
-                    <i class="fas fa-coffee"></i>
+                    <i class="fas fa-telescope"></i>
                     <h3 class="counter" data-target="50">0</h3>
-                    <p>咖啡品种</p>
+                    <p>合作天文台</p>
                 </div>
                 <div class="stat-item">
-                    <i class="fas fa-award"></i>
-                    <h3 class="counter" data-target="8">0</h3>
-                    <p>获奖年份</p>
+                    <i class="fas fa-graduation-cap"></i>
+                    <h3 class="counter" data-target="30">0</h3>
+                    <p>科普讲座</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Beans Section -->
-    <section class="beans" id="beans">
+    <!-- Events Section -->
+    <section class="events" id="events">
         <div class="container">
             <div class="section-title">
-                <h2>精选咖啡豆</h2>
-                <p>来自世界各地优质产区的精品咖啡豆。</p>
+                <h2>近期天文活动</h2>
+                <p>从观星入门到深空摄影，总有一场活动适合你。</p>
             </div>
-            <div class="beans-grid">
-                <div class="bean-card">
-                    <div class="bean-img">
-                        <img src="https://images.unsplash.com/photo-1559056199-641a0ac8b55e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="埃塞俄比亚">
+            <div class="events-grid">
+                <div class="event-card">
+                    <div class="event-img">
+                        <img src="https://images.unsplash.com/photo-1502134249126-9f3755a50d78?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="流星雨">
                     </div>
-                    <div class="bean-content">
-                        <h3>埃塞俄比亚 · 耶加雪菲</h3>
-                        <p>花香果酸明亮，口感清爽，带有柑橘和茶感。</p>
-                        <a href="#" class="btn">了解详情</a>
-                    </div>
-                </div>
-                <div class="bean-card">
-                    <div class="bean-img">
-                        <img src="https://images.unsplash.com/photo-1521302080334-4bebac2763a6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="哥伦比亚">
-                    </div>
-                    <div class="bean-content">
-                        <h3>哥伦比亚 · 慧兰</h3>
-                        <p>焦糖甜感，坚果香气，酸度平衡，口感顺滑。</p>
-                        <a href="#" class="btn">了解详情</a>
+                    <div class="event-content">
+                        <h3>英仙座流星雨观测</h3>
+                        <p>8月12-13日，远离城市光污染，一起仰望夏日星空最壮观的流星雨。</p>
+                        <a href="#" class="btn">立即报名</a>
                     </div>
                 </div>
-                <div class="bean-card">
-                    <div class="bean-img">
-                        <img src="https://images.unsplash.com/photo-1507133750040-4a8f57021571?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80" alt="巴西">
+                <div class="event-card">
+                    <div class="event-img">
+                        <img src="https://images.unsplash.com/photo-1444703686981-a3abbc4d4fe3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="银河系">
                     </div>
-                    <div class="bean-content">
-                        <h3>巴西 · 喜拉多</h3>
-                        <p>巧克力风味，坚果香气，低酸度，醇厚口感。</p>
-                        <a href="#" class="btn">了解详情</a>
+                    <div class="event-content">
+                        <h3>银河摄影工作坊</h3>
+                        <p>学习如何拍摄银河、星轨与流星雨，掌握后期处理技巧。</p>
+                        <a href="#" class="btn">立即报名</a>
+                    </div>
+                </div>
+                <div class="event-card">
+                    <div class="event-img">
+                        <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2072&q=80" alt="土星">
+                    </div>
+                    <div class="event-content">
+                        <h3>行星观测之夜</h3>
+                        <p>通过专业望远镜观测土星环、木星大红斑与月球环形山。</p>
+                        <a href="#" class="btn">立即报名</a>
                     </div>
                 </div>
             </div>
@@ -535,9 +535,9 @@
     <!-- CTA Section -->
     <section class="cta" id="get-involved">
         <div class="container">
-            <h2>加入我们的咖啡之旅</h2>
-            <p>订阅我们的咖啡，每月为您精心挑选全球优质产区的精品咖啡豆。</p>
-            <a href="#" class="btn">立即订阅</a>
+            <h2>加入我们的星际之旅</h2>
+            <p>成为会员，获取活动优先通知与专业指导，一起探索宇宙奥秘。</p>
+            <a href="#" class="btn">立即加入</a>
         </div>
     </section>
 
@@ -546,8 +546,8 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-column">
-                    <h3>醇享咖啡</h3>
-                    <p>我们致力于为您带来世界各地的精品咖啡豆，让每一杯咖啡都成为享受。</p>
+                    <h3>星语天文</h3>
+                    <p>我们致力于天文科普与观星活动，让更多人感受宇宙的壮丽。</p>
                     <div class="social-links">
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
                         <a href="#"><i class="fab fa-twitter"></i></a>
@@ -560,30 +560,30 @@
                     <ul class="footer-links">
                         <li><a href="#home">首页</a></li>
                         <li><a href="#about">关于我们</a></li>
-                        <li><a href="#beans">咖啡豆</a></li>
+                        <li><a href="#events">天文活动</a></li>
                         <li><a href="#get-involved">加入我们</a></li>
                         <li><a href="#contact">联系方式</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
-                    <h3>咖啡知识</h3>
+                    <h3>天文资源</h3>
                     <ul class="footer-links">
-                        <li><a href="#">冲泡指南</a></li>
-                        <li><a href="#">咖啡产区</a></li>
-                        <li><a href="#">烘焙知识</a></li>
-                        <li><a href="#">品鉴技巧</a></li>
-                        <li><a href="#">咖啡文化</a></li>
+                        <li><a href="#">观星指南</a></li>
+                        <li><a href="#">天文教程</a></li>
+                        <li><a href="#">拍摄技巧</a></li>
+                        <li><a href="#">天象预报</a></li>
+                        <li><a href="#">器材推荐</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
                     <h3>联系我们</h3>
-                    <p><i class="fas fa-map-marker-alt"></i> 咖啡街88号，上海</p>
+                    <p><i class="fas fa-map-marker-alt"></i> 星空路66号，北京</p>
                     <p><i class="fas fa-phone"></i> +86 123 4567 8900</p>
-                    <p><i class="fas fa-envelope"></i> hello@purecoff.cn</p>
+                    <p><i class="fas fa-envelope"></i> hello@starrysky.org</p>
                 </div>
             </div>
             <div class="copyright">
-                <p>&copy; 2025 醇享咖啡. 保留所有权利.</p>
+                <p>&copy; 2025 星语天文. 保留所有权利.</p>
             </div>
         </div>
     </footer>
